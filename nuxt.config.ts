@@ -5,4 +5,9 @@ export default defineNuxtConfig({
     baseURL: "",
     buildAssetsDir: "assets",
   },
+  modules: ["@nuxt/ui"],
+  ui: {
+    global: true,
+    icons: ["mdi", "simple-icons"],
+  },
 });
