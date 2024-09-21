@@ -7,13 +7,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "deploy": "gh-pages -d dist"
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/i18n": "^8.0.0-rc.5",
-    "gh-pages": "^6.0.0",
     "nuxt": "^3.7.4",
     "typescript": "^5.2.2",
     "vue": "^3.3.4",
