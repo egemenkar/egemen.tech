@@ -1,75 +1,57 @@
-# Nuxt 3 Minimal Starter
+# My Personal Website
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is the source code for my personal website, built with Nuxt 3 and Vue.js.
 
-## Setup
+## 🚀 Features
 
-Make sure to install the dependencies:
+- Responsive design
+- Dark mode
+- Internationalization (i18n) support
+- About me section
+- Projects showcase (soon)
+- Bookmarks collection (soon)
 
-```bash
-# npm
-npm install
+## 🛠️ Technologies Used
 
-# pnpm
-pnpm install
+- [Nuxt 3](https://nuxt.com/)
+- [Vue.js](https://vuejs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [i18n](https://i18n.nuxtjs.org/)
 
-# yarn
-yarn install
+## 🏗️ Setup
 
-# bun
-bun install
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   cd your-repo-name
+   ```
 
-## Development Server
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Start the development server on `http://localhost:3000`:
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-```bash
-# npm
-npm run dev
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-# pnpm
-pnpm run dev
+## 🚀 Deployment
 
-# yarn
-yarn dev
+This site is deployed using Vercel.
 
-# bun
-bun run dev
-```
+## 🤝 Contributing
 
-## Production
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/egemenkar/egmn.dev/issues).
 
-Build the application for production:
+## 📝 License
 
-```bash
-# npm
-npm run build
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 
-# pnpm
-pnpm run build
+## 📞 Contact
 
-# yarn
-yarn build
+Egemen Kar - egemenkar@gmail.com
 
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Project Link: [https://github.com/egemenkar/egmn.dev](https://github.com/egemenkar/egmn.dev)
