@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  ssr: false,
   modules: ["@nuxt/ui", "@nuxtjs/i18n"],
   ui: {
     global: true,
