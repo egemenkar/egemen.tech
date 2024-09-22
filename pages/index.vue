@@ -25,7 +25,7 @@
         <UIcon name="i-simple-icons-github" class="w-6 h-6" />
       </a>
       <a
-        href="https://www.linkedin.com/in/egemenkar/"
+        href="https://www.linkedin.com/in/egemen-kar/"
         target="_blank"
         rel="noopener noreferrer"
         class="text-gray-400 hover:text-white transition-colors duration-200"
