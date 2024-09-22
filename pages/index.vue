@@ -45,13 +45,13 @@
             class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"
           >
             <UIcon :name="link.icon" class="mr-2" />
-            <span class="hidden sm:inline">{{ $t(link.name) }}</span>
+            <span class="inline">{{ $t(link.name) }}</span>
           </NuxtLink>
         </li>
       </ul>
     </nav>
 
-    <p class="mt-8 text-center text-gray-400 max-w-md">
+    <p class="mt-8 text-center text-gray-400 max-w-md text-xl">
       {{ $t("greeting") }}
     </p>
 
