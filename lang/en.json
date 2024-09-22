@@ -14,9 +14,9 @@
   },
   "bookmarks": {
     "title": "Bookmarks",
-    "comingSoon": "Bookmark collection coming soon!",
-    "comingSoonMessage": "I'm curating an interesting collection of bookmarks. They'll be featured here shortly. Check back for updates!",
-    "description": "I'm assembling a carefully selected list of articles, tools, and resources that have been instrumental in my journey as a frontend developer. Stay tuned for insights that could boost your development skills too!"
+    "allBookmarks": "All Bookmarks",
+    "filterByCollection": "Filter by Collection",
+    "visitLink": "Visit Link"
   },
   "contact": "Contact",
   "backToHome": "Back to Home"

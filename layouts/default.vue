@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 to-black text-gray-300">
-    <nav class="w-full p-4 fixed top-0 left-0 right-0 z-50">
+    <nav class="w-full p-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300" :class="{ 'bg-gray-900 bg-opacity-80 backdrop-blur-sm': isScrolled }">
       <div class="max-w-3xl mx-auto flex items-center justify-between px-4">
         <NuxtLink to="/" class="flex items-center space-x-3">
           <UAvatar
@@ -77,6 +77,8 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
 const { t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
@@ -88,10 +90,23 @@ const links = [
 ]
 
 const isMenuOpen = ref(false)
+const isScrolled = ref(false)
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
+
+const checkScroll = () => {
+  isScrolled.value = window.scrollY > 10
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', checkScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', checkScroll)
+})
 </script>
 
 <style scoped>
