@@ -34,21 +34,9 @@
       </a>
     </div>
 
-    <p class="mt-8 text-center text-gray-400 max-w-md">
-      {{ $t("greeting") }}
-    </p>
-
-    <p class="mt-8 text-center text-gray-400 max-w-md">
-      {{ $t("intro1") }}
-    </p>
-
-    <p class="mt-8 text-center text-gray-400 max-w-md">
-      {{ $t("intro2") }}
-    </p>
-
     <!-- Updated floating navigation menu -->
     <nav
-      class="mt-12 bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg"
+      class="mt-4 bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg"
     >
       <ul class="flex space-x-6">
         <li v-for="link in links" :key="link.to" class="relative group">
@@ -62,6 +50,20 @@
         </li>
       </ul>
     </nav>
+
+    <p class="mt-8 text-center text-gray-400 max-w-md">
+      {{ $t("greeting") }}
+    </p>
+
+    <p class="mt-8 text-center text-gray-400 max-w-md">
+      {{ $t("intro1") }}
+    </p>
+
+    <p class="mt-8 text-center text-gray-400 max-w-md">
+      {{ $t("intro2") }}
+    </p>
+
+    
   </div>
 </template>
 
