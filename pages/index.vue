@@ -9,7 +9,7 @@
       class="mb-4"
       :ui="{
         size: {
-          '3xl': 'w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56',
+          '3xl': 'w-28 h-28 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56',
         },
       }"
     />
@@ -55,11 +55,11 @@
       {{ $t("greeting") }}
     </p>
 
-    <p class="mt-8 text-center text-gray-400 max-w-md">
+    <p class="mt-4 text-center text-gray-400 max-w-md">
       {{ $t("intro1") }}
     </p>
 
-    <p class="mt-8 text-center text-gray-400 max-w-md">
+    <p class="mt-4 text-center text-gray-400 max-w-md">
       {{ $t("intro2") }}
     </p>
 
