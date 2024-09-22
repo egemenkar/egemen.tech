@@ -11,17 +11,20 @@
           <span class="text-gray-200 text-lg font-semibold">{{ $t('name') }}</span>
         </NuxtLink>
         <!-- Desktop menu -->
-        <div class="hidden md:flex space-x-2">
-          <NuxtLink 
-            v-for="link in links" 
-            :key="link.to" 
-            :to="localePath(link.to)" 
-            class="text-gray-400 hover:text-gray-200 transition-colors duration-200 px-3 py-2 rounded-md"
-            :class="{ 'text-gray-200 bg-gray-800': $route.path === localePath(link.to) }"
-          >
-            {{ $t(link.name) }}
-          </NuxtLink>
-        </div>
+        <nav class="hidden md:block bg-gray-800 bg-opacity-80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">
+          <ul class="flex space-x-6">
+            <li v-for="link in links" :key="link.to" class="relative group">
+              <NuxtLink
+                :to="localePath(link.to)"
+                class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center"
+                :class="{ 'text-white': $route.path === localePath(link.to) }"
+              >
+                <UIcon :name="link.icon" class="mr-2" />
+                <span>{{ $t(link.name) }}</span>
+              </NuxtLink>
+            </li>
+          </ul>
+        </nav>
         <!-- Hamburger menu button -->
         <button @click="toggleMenu" class="md:hidden text-gray-400 hover:text-gray-200">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -48,10 +51,16 @@
             @click="isMenuOpen = false"
           >
             <UAvatar
-              src="https://avatars.githubusercontent.com/u/85014459?v=4"
-              alt="Egemen Kar"
-              size="xl"
-            />
+      src="https://avatars.githubusercontent.com/u/85014459?v=4"
+      :alt="$t('name')"
+      size="3xl"
+      class="mb-4"
+      :ui="{
+        size: {
+          '3xl': 'w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56',
+        },
+      }"
+    />
             <h1 class="mt-4 text-4xl font-bold text-gray-100">{{ $t('name') }}</h1>
             <p class="mt-2 text-xl text-gray-400">{{ $t('title') }}</p>
           </NuxtLink>
@@ -59,16 +68,17 @@
             v-for="link in links" 
             :key="link.to" 
             :to="localePath(link.to)" 
-            class="text-gray-400 hover:text-gray-200 transition-colors duration-200 px-3 py-4 text-xl"
+            class="text-gray-400 hover:text-gray-200 transition-colors duration-200 px-3 py-4 text-xl flex items-center"
             :class="{ 'text-gray-200': $route.path === localePath(link.to) }"
             @click="isMenuOpen = false"
           >
+            <UIcon :name="link.icon" class="mr-3 text-2xl" />
             {{ $t(link.name) }}
           </NuxtLink>
         </div>
       </div>
     </transition>
-    <main class="flex-grow flex justify-center p-4 mt-16">
+    <main class="flex-grow flex justify-center mt-24">
       <div class="w-full max-w-3xl overflow-y-auto custom-scrollbar">
         <slot />
       </div>
@@ -84,9 +94,9 @@ const localePath = useLocalePath()
 const route = useRoute()
 
 const links = [
-  { name: 'about', to: '/about' },
-  { name: 'projects.title', to: '/projects' },
-  { name: 'bookmarks.title', to: '/bookmarks' },
+  { name: 'about', to: '/about', icon: 'i-heroicons-user' },
+  { name: 'projects.title', to: '/projects', icon: 'i-heroicons-code-bracket' },
+  { name: 'bookmarks.title', to: '/bookmarks', icon: 'i-heroicons-bookmark' },
 ]
 
 const isMenuOpen = ref(false)
@@ -136,3 +146,4 @@ onUnmounted(() => {
   background-color: rgba(156, 163, 175, 0.5);
 }
 </style>
+
