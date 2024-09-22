@@ -2,15 +2,22 @@
   "name": "Egemen Kar",
   "title": "Frontend Developer",
   "greeting": "Hi there! 👋",
-  "intro1": "I'm a Frontend Developer currently working at {0}. It's a software company focused on improving e-commerce operations, ensuring smooth and efficient processes for online businesses.",
+  "intro1": {
+    "before": "I'm a Frontend Developer currently working at ",
+    "after": ". It's a software company focused on improving e-commerce operations, ensuring smooth and efficient processes for online businesses."
+  },
   "intro2": "I work with technologies like Vue.js, Nuxt.js, and React to build responsive, scalable web applications. With over 5 years of experience, I focus on creating seamless user experiences and integrating powerful tools to bring ideas to life.",
   "despatchCloud": "Despatch Cloud",
   "about": "About",
   "projects": {
     "title": "Projects",
-    "comingSoon": "Project showcase coming soon!",
-    "comingSoonMessage": "I'm working on exciting projects and building new ones. They'll be featured here shortly. Stay tuned for updates!",
-    "description": "I'm currently working on some innovative web applications and tools. Check back soon to see a showcase of my latest work in frontend development, including projects using Vue.js, React, and more."
+    "comingSoon": "More projects on the way!",
+    "comingSoonMessage": "This isn't an exhaustive list of my projects. I'm constantly working on new and exciting ones. I'll be updating this section soon with more of my work. Stay tuned!",
+    "description": "I'm currently working on some innovative web applications and tools. Check back soon to see a showcase of my latest work in frontend development, including projects using Vue.js, React, and more.",
+    "portfolioSite": {
+      "title": "egmn.dev",
+      "description": "My personal portfolio website built with Vue.js, Nuxt.js, and Tailwind CSS. Features responsive design, dark mode, and internationalization."
+    }
   },
   "bookmarks": {
     "title": "Bookmarks",
@@ -20,5 +27,4 @@
   },
   "contact": "Contact",
   "backToHome": "Back to Home"
-
 }

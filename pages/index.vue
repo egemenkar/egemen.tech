@@ -32,6 +32,12 @@
       >
         <UIcon name="i-simple-icons-linkedin" class="w-6 h-6" />
       </a>
+      <a
+        href="mailto:egemenkar@gmail.com"
+        class="text-gray-400 hover:text-white transition-colors duration-200"
+      >
+        <UIcon name="i-heroicons-envelope-solid" class="w-6 h-6" />
+      </a>
     </div>
 
     <!-- Updated floating navigation menu -->
@@ -56,7 +62,14 @@
     </p>
 
     <p class="mt-4 text-center text-gray-400 max-w-md">
-      {{ $t("intro1") }}
+      {{ $t("intro1.before") }}
+      <span 
+        class="transition-colors duration-200 cursor-pointer underline hover:text-white"
+        @click="openDespatchCloudLink"
+      >
+        {{ $t("despatchCloud") }}
+      </span>
+      {{ $t("intro1.after") }}
     </p>
 
     <p class="mt-4 text-center text-gray-400 max-w-md">
@@ -83,6 +96,17 @@ const links = [
   { name: "projects.title", to: "/projects", icon: "i-heroicons-code-bracket" },
   { name: "bookmarks.title", to: "/bookmarks", icon: "i-heroicons-bookmark" },
 ];
+
+const despatchCloudLink = h(
+  'a',
+  {
+    href: 'https://despatchcloud.com/',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+    class: 'text-blue-400 hover:text-blue-300 transition-colors duration-200'
+  },
+  t('despatchCloud')
+)
 </script>
 
 <style scoped>

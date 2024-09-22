@@ -14,7 +14,7 @@
               <div v-for="(job, index) in visibleJobs" :key="job.company" class="job-item">
                 <h3 class="text-lg sm:text-xl font-medium text-gray-200">{{ job.company }}</h3>
                 <p class="text-base sm:text-lg italic text-gray-300">{{ job.position }}</p>
-                <p class="text-xs sm:text-sm text-gray-400 mb-1 sm:mb-2">{{ job.period }} | {{ job.location }}</p>
+                <p class="text-gray-400 mb-1 sm:mb-2">{{ job.period }} | {{ job.location }}</p>
                 <ul class="list-disc list-inside text-gray-300 text-xs sm:text-sm">
                   <li v-for="responsibility in job.responsibilities" :key="responsibility" class="mb-1">{{ responsibility }}</li>
                 </ul>
@@ -31,7 +31,7 @@
               <div v-for="edu in visibleEducation" :key="edu.institution">
                 <h3 class="text-lg sm:text-xl font-medium text-gray-200">{{ edu.institution }}</h3>
                 <p class="text-sm sm:text-base text-gray-300">{{ edu.degree }}</p>
-                <p class="text-xs sm:text-sm text-gray-400">{{ edu.year }} | {{ edu.location }}</p>
+                <p class="text-gray-400">{{ edu.year }} | {{ edu.location }}</p>
               </div>
             </TransitionGroup>
           </template>
