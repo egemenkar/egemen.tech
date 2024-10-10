@@ -63,12 +63,14 @@
 
     <p class="mt-4 text-center text-gray-400 max-w-md">
       {{ $t("intro1.before") }}
-      <span 
-        class="transition-colors duration-200 cursor-pointer underline hover:text-white"
-        @click="openDespatchCloudLink"
+      <a
+        href="https://despatchcloud.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-white hover:text-blue-300 transition-colors duration-200 underline"
       >
         {{ $t("despatchCloud") }}
-      </span>
+      </a>
       {{ $t("intro1.after") }}
     </p>
 
@@ -97,16 +99,17 @@ const links = [
   { name: "bookmarks.title", to: "/bookmarks", icon: "i-heroicons-bookmark" },
 ];
 
-const despatchCloudLink = h(
-  'a',
-  {
-    href: 'https://despatchcloud.com/',
-    target: '_blank',
-    rel: 'noopener noreferrer',
-    class: 'text-blue-400 hover:text-blue-300 transition-colors duration-200'
-  },
-  t('despatchCloud')
-)
+// Remove the openDespatchCloudLink function
+// const openDespatchCloudLink = h(
+//   'a',
+//   {
+//     href: 'https://despatchcloud.com/',
+//     target: '_blank',
+//     rel: 'noopener noreferrer',
+//     class: 'text-blue-400 hover:text-blue-300 transition-colors duration-200'
+//   },
+//   t('despatchCloud')
+// )
 </script>
 
 <style scoped>
